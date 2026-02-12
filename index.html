@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PENEZUELA Playbook 🇻🇪🇦🇷 — Online Sales & 3D Printing Business Guide</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a1a;
+            color: #e0e0e0;
+            line-height: 1.7;
+        }
+        .hero {
+            background: linear-gradient(135deg, #1a0a2e 0%, #16213e 50%, #0a1628 100%);
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 2px solid #2d1f4e;
+        }
+        .hero h1 {
+            font-size: 3em;
+            background: linear-gradient(135deg, #00d2ff, #7b2ff7, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        .hero .subtitle {
+            font-size: 1.3em;
+            color: #8892b0;
+            margin-bottom: 20px;
+        }
+        .hero .flags {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .hero .tagline {
+            color: #64ffda;
+            font-style: italic;
+            font-size: 1.1em;
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+        
+        .section {
+            background: #111127;
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 30px;
+            border: 1px solid #1e1e3f;
+            transition: border-color 0.3s;
+        }
+        .section:hover { border-color: #7b2ff7; }
+        
+        h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #64ffda;
+        }
+        h3 {
+            font-size: 1.3em;
+            margin: 25px 0 12px;
+            color: #ccd6f6;
+        }
+        
+        .niche-card {
+            background: #1a1a3e;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 15px 0;
+            border-left: 4px solid #7b2ff7;
+        }
+        .niche-card h4 {
+            font-size: 1.2em;
+            color: #ff6b6b;
+            margin-bottom: 8px;
+        }
+        .niche-card .margin {
+            display: inline-block;
+            background: #064e3b;
+            color: #34d399;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .niche-card .startup {
+            display: inline-block;
+            background: #1e1b4b;
+            color: #818cf8;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            margin-left: 8px;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            margin: 15px 0;
+            padding: 15px;
+            background: #0d0d24;
+            border-radius: 10px;
+        }
+        .step-num {
+            background: linear-gradient(135deg, #7b2ff7, #00d2ff);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-right: 15px;
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .platform-card {
+            background: #1a1a3e;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #2d2d5e;
+        }
+        .platform-card h4 { color: #00d2ff; margin-bottom: 8px; }
+        .platform-card .rating {
+            color: #fbbf24;
+            font-size: 1.2em;
+            margin-bottom: 8px;
+        }
+        
+        .miami-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f97316, #ef4444);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+        
+        .shipping-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        .shipping-table th, .shipping-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #1e1e3f;
+        }
+        .shipping-table th {
+            background: #1a1a3e;
+            color: #64ffda;
+        }
+        .shipping-table tr:hover { background: #111130; }
+        
+        .rec-box {
+            background: linear-gradient(135deg, #1a0a2e, #0d2137);
+            border: 2px solid #64ffda;
+            border-radius: 16px;
+            padding: 30px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        .rec-box h3 { color: #64ffda; font-size: 1.5em; }
+        .rec-box p { font-size: 1.1em; margin-top: 10px; }
+        
+        .printer-card {
+            background: #1a1a3e;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 15px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .printer-card h4 { color: #ff6b6b; }
+        .printer-price {
+            font-size: 1.5em;
+            color: #34d399;
+            font-weight: bold;
+        }
+        
+        ul { padding-left: 20px; margin: 10px 0; }
+        li { margin: 6px 0; }
+        
+        a { color: #64ffda; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #4a5568;
+            border-top: 1px solid #1e1e3f;
+        }
+        .footer .credit { color: #7b2ff7; font-weight: bold; }
+
+        .loading {
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .loading .spinner {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border: 4px solid #1e1e3f;
+            border-top-color: #7b2ff7;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2em; }
+            .section { padding: 25px; }
+            .comparison-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="flags">🇻🇪🇦🇷⚡</div>
+    <h1>PENEZUELA Playbook</h1>
+    <p class="subtitle">Online Sales & 3D Printing Business Guide — Miami Edition</p>
+    <p class="tagline">"I'm the brains, you're the muscle" — Lane ⚡</p>
+</div>
+
+<div class="container">
+
+    <!-- SECTION 1: THE RECOMMENDATION -->
+    <div class="rec-box">
+        <h3>⚡ LANE'S #1 RECOMMENDATION</h3>
+        <p>Start a <strong>3D Printing business on Etsy + TikTok Shop</strong> selling custom home decor, organizers, and cosplay accessories. Low startup ($500-800), high margins (60-80%), and you're in Miami — perfect for Latin American design trends that nobody else is doing.</p>
+    </div>
+
+    <!-- SECTION 2: 3D PRINTING BUSINESS -->
+    <div class="section" id="3d-printing">
+        <h2>🖨️ 3D Printing Business</h2>
+        <p>3D printing is one of the best low-startup, high-margin businesses you can run from home in 2026. Here's everything you need.</p>
+
+        <h3>Best Items to Print & Sell</h3>
+
+        <div class="niche-card">
+            <h4>🏠 Home Decor & Organization</h4>
+            <span class="margin">Margin: 70-85%</span>
+            <span class="startup">Cost: $0.50-3 per item</span>
+            <ul>
+                <li><strong>Desk organizers & cable management</strong> — sell for $15-30, cost $1-3 to print</li>
+                <li><strong>Plant pots & planters</strong> — geometric/modern designs, sell $12-25</li>
+                <li><strong>Wall art & signs</strong> — custom text, sell $20-40</li>
+                <li><strong>Kitchen gadgets</strong> — spice racks, bag clips, sell $8-15</li>
+            </ul>
+        </div>
+
+        <div class="niche-card">
+            <h4>🎮 Gaming & Tech Accessories</h4>
+            <span class="margin">Margin: 65-80%</span>
+            <span class="startup">Cost: $1-5 per item</span>
+            <ul>
+                <li><strong>Controller stands & headphone holders</strong> — sell for $15-35</li>
+                <li><strong>Custom keycaps</strong> — sell for $5-15 each (volume play)</li>
+                <li><strong>Phone/tablet stands</strong> — sell for $12-20</li>
+                <li><strong>Cable organizers for gaming setups</strong> — sell for $10-20</li>
+            </ul>
+        </div>
+
+        <div class="niche-card">
+            <h4>🦸 Cosplay & Pop Culture</h4>
+            <span class="margin">Margin: 60-75%</span>
+            <span class="startup">Cost: $3-15 per item</span>
+            <ul>
+                <li><strong>Cosplay props & masks</strong> — sell for $30-100+ (⚠️ avoid trademarked characters)</li>
+                <li><strong>Anime figurine bases & display stands</strong> — sell for $15-40</li>
+                <li><strong>Custom miniatures for D&D/tabletop</strong> — sell for $5-20 each</li>
+                <li><strong>LED lamp bases (lithophanes)</strong> — custom photo lamps, sell $25-50</li>
+            </ul>
+        </div>
+
+        <div class="niche-card">
+            <h4>🐾 Pet Accessories</h4>
+            <span class="margin">Margin: 70-85%</span>
+            <span class="startup">Cost: $1-4 per item</span>
+            <ul>
+                <li><strong>Custom pet name tags</strong> — sell $10-20 (high volume)</li>
+                <li><strong>Food bowl stands</strong> — sell $15-30</li>
+                <li><strong>Treat dispensers & puzzle toys</strong> — sell $12-25</li>
+                <li><strong>Pet memorial items</strong> — sell $20-40 (emotional purchase = higher margins)</li>
+            </ul>
+        </div>
+
+        <h3>Recommended 3D Printers for Startup</h3>
+
+        <div class="printer-card">
+            <div>
+                <h4>🏆 Bambu Lab A1 Mini (BEST STARTER)</h4>
+                <p>Fast, reliable, auto-calibrating. Perfect for beginners. Great print quality out of the box.</p>
+            </div>
+            <div class="printer-price">~$299</div>
+        </div>
+
+        <div class="printer-card">
+            <div>
+                <h4>🔥 Bambu Lab P1S (BEST FOR BUSINESS)</h4>
+                <p>Enclosed, multi-material capable, fast. The workhorse for a print farm.</p>
+            </div>
+            <div class="printer-price">~$599</div>
+        </div>
+
+        <div class="printer-card">
+            <div>
+                <h4>💰 Creality Ender-3 V3 SE (BUDGET KING)</h4>
+                <p>Affordable, huge community, tons of mods available. Good if you're testing the waters.</p>
+            </div>
+            <div class="printer-price">~$199</div>
+        </div>
+
+        <h3>Filament Costs</h3>
+        <ul>
+            <li><strong>PLA (standard):</strong> $15-20/kg — most items use 50-200g = $0.75-4.00 per print</li>
+            <li><strong>PETG (durable):</strong> $18-25/kg — for functional items</li>
+            <li><strong>TPU (flexible):</strong> $25-30/kg — phone cases, grips</li>
+            <li><strong>Resin (detail):</strong> $30-50/L — miniatures, jewelry</li>
+        </ul>
+    </div>
+
+    <!-- SECTION 3: ONLINE PLATFORMS -->
+    <div class="section" id="platforms">
+        <h2>🛒 Best Selling Platforms (2026)</h2>
+
+        <div class="comparison-grid">
+            <div class="platform-card">
+                <h4>Etsy</h4>
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+                <p><strong>Best for:</strong> 3D printed items, custom/handmade goods</p>
+                <p><strong>Fees:</strong> 6.5% transaction + $0.20 listing</p>
+                <p><strong>Why:</strong> Buyers EXPECT unique/custom items. Perfect for 3D prints. Built-in audience.</p>
+                <p><strong>Tip:</strong> SEO is everything on Etsy — use all 13 tags</p>
+            </div>
+
+            <div class="platform-card">
+                <h4>TikTok Shop</h4>
+                <div class="rating">⭐⭐⭐⭐⭐</div>
+                <p><strong>Best for:</strong> Viral products, trending items</p>
+                <p><strong>Fees:</strong> 5% commission</p>
+                <p><strong>Why:</strong> FREE organic reach. One viral video = thousands in sales overnight. BLOWING UP in 2026.</p>
+                <p><strong>Tip:</strong> Film the 3D printing process — satisfying content goes viral</p>
+            </div>
+
+            <div class="platform-card">
+                <h4>Amazon FBA</h4>
+                <div class="rating">⭐⭐⭐⭐</div>
+                <p><strong>Best for:</strong> Volume sales, mainstream products</p>
+                <p><strong>Fees:</strong> 15% referral + FBA fees</p>
+                <p><strong>Why:</strong> Massive audience, Prime shipping. Best for standardized products at volume.</p>
+                <p><strong>Tip:</strong> Higher barrier to entry but highest volume potential</p>
+            </div>
+
+            <div class="platform-card">
+                <h4>eBay</h4>
+                <div class="rating">⭐⭐⭐</div>
+                <p><strong>Best for:</strong> Electronics, collectibles, flips</p>
+                <p><strong>Fees:</strong> 13.25% final value</p>
+                <p><strong>Why:</strong> Good for testing prices and selling one-offs. Auction format for rare items.</p>
+                <p><strong>Tip:</strong> Best for reselling/flipping, secondary for 3D prints</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 4: MIAMI ADVANTAGES -->
+    <div class="section" id="miami">
+        <h2>🌴 Miami Advantages <span class="miami-badge">LOCAL EDGE</span></h2>
+        
+        <div class="niche-card">
+            <h4>🚢 PortMiami — Wholesale Access</h4>
+            <p>You're next to the <strong>largest cargo port in Florida</strong>. Direct access to wholesale goods from Latin America, China, and Europe. Wholesale markets in Hialeah and Doral sell inventory at 50-70% below retail.</p>
+        </div>
+
+        <div class="niche-card">
+            <h4>🌎 Latin American Market</h4>
+            <p>Bilingual advantage — sell to US AND Latin American markets. Ship to Colombia, Brazil, Argentina from Miami cheaply. Latin-inspired designs (mate cups, fútbol accessories, cultural decor) are underserved niches on Etsy.</p>
+        </div>
+
+        <div class="niche-card">
+            <h4>📸 Content Creation Paradise</h4>
+            <p>Miami aesthetics = instant TikTok/Instagram engagement. Film your 3D prints with Miami backgrounds. The city itself is a marketing asset.</p>
+        </div>
+
+        <div class="niche-card">
+            <h4>🏪 Local Wholesale Sources</h4>
+            <ul>
+                <li><strong>Miami Wholesale District</strong> (Downtown) — clothing, accessories, electronics</li>
+                <li><strong>Hialeah wholesale</strong> — home goods, tools, electronics</li>
+                <li><strong>Doral warehouses</strong> — bulk inventory, liquidation</li>
+                <li><strong>Micro Center (Kendall)</strong> — tech, 3D printing supplies, cables</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SECTION 5: SHIPPING -->
+    <div class="section" id="shipping">
+        <h2>📦 Shipping Guide</h2>
+
+        <table class="shipping-table">
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Best For</th>
+                    <th>Cost (small item)</th>
+                    <th>Speed</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Pirate Ship</strong> ☠️</td>
+                    <td>EVERYTHING — discounted USPS/UPS rates</td>
+                    <td>$3-5</td>
+                    <td>2-5 days</td>
+                </tr>
+                <tr>
+                    <td><strong>USPS Ground Advantage</strong></td>
+                    <td>Small, light items (most 3D prints)</td>
+                    <td>$4-6</td>
+                    <td>2-5 days</td>
+                </tr>
+                <tr>
+                    <td><strong>USPS Priority Mail</strong></td>
+                    <td>Fast domestic, free boxes</td>
+                    <td>$8-12</td>
+                    <td>1-3 days</td>
+                </tr>
+                <tr>
+                    <td><strong>UPS Ground (via Pirate Ship)</strong></td>
+                    <td>Heavier items (2+ lbs)</td>
+                    <td>$7-12</td>
+                    <td>3-5 days</td>
+                </tr>
+                <tr>
+                    <td><strong>Amazon FBA</strong></td>
+                    <td>Volume sellers — Amazon handles it all</td>
+                    <td>Included in FBA fees</td>
+                    <td>1-2 days (Prime)</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Pro Tips</h3>
+        <ul>
+            <li>🏴‍☠️ <strong>Pirate Ship</strong> (pirateship.com) is the #1 move — same USPS/UPS service, 50-70% cheaper than retail rates. Free to use.</li>
+            <li>📫 <strong>USPS flat rate boxes</strong> are free from USPS.com — order them to your house</li>
+            <li>⚖️ Most 3D printed items are LIGHT — you'll mostly use First Class or Ground Advantage</li>
+            <li>🌎 For international (Latin America): USPS Priority Mail International or use a Miami-based freight forwarder</li>
+        </ul>
+    </div>
+
+    <!-- SECTION 6: GETTING STARTED -->
+    <div class="section" id="start">
+        <h2>🚀 Step-by-Step: Getting Started</h2>
+
+        <div class="step">
+            <div class="step-num">1</div>
+            <div>
+                <strong>Buy a printer ($200-600)</strong><br>
+                Start with the Bambu Lab A1 Mini ($299) or Ender-3 V3 SE ($199). One printer is enough to start. Hit up Micro Center in Kendall.
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-num">2</div>
+            <div>
+                <strong>Pick ONE niche</strong><br>
+                Don't try to sell everything. Pick one: home decor, gaming accessories, pet stuff, or cosplay. Master it.
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-num">3</div>
+            <div>
+                <strong>Find/design 5-10 products</strong><br>
+                Use Thingiverse, Printables, or MyMiniFactory for free/commercial STL files. Or learn Fusion 360 (free for personal use) to design your own — custom = higher margins.
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-num">4</div>
+            <div>
+                <strong>Open Etsy shop + TikTok Shop</strong><br>
+                Etsy: $0.20 per listing. TikTok Shop: free to join. Run BOTH — Etsy for search traffic, TikTok for viral discovery.
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-num">5</div>
+            <div>
+                <strong>Create content — film the printing process</strong><br>
+                Time-lapses of 3D prints go VIRAL on TikTok. Film the process, show the finished product. This is your free marketing machine.
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-num">6</div>
+            <div>
+                <strong>Set up Pirate Ship for shipping</strong><br>
+                Connect to your Etsy shop for auto-imported orders. Print labels at home. Drop packages at USPS.
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-num">7</div>
+            <div>
+                <strong>Scale: add printers + automate</strong><br>
+                Once you're selling consistently, add a second printer. Set up OctoPrint on a Raspberry Pi for remote monitoring. Eventually build a mini print farm (3-5 printers).
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 7: BUDGET BREAKDOWN -->
+    <div class="section" id="budget">
+        <h2>💰 Startup Budget Breakdown</h2>
+
+        <table class="shipping-table">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Budget Option</th>
+                    <th>Recommended</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3D Printer</td>
+                    <td>$199 (Ender-3 V3 SE)</td>
+                    <td>$299 (Bambu A1 Mini)</td>
+                </tr>
+                <tr>
+                    <td>Filament (3 rolls)</td>
+                    <td>$45</td>
+                    <td>$60</td>
+                </tr>
+                <tr>
+                    <td>Basic tools (scraper, pliers)</td>
+                    <td>$15</td>
+                    <td>$25</td>
+                </tr>
+                <tr>
+                    <td>Etsy listings (25 products)</td>
+                    <td>$5</td>
+                    <td>$5</td>
+                </tr>
+                <tr>
+                    <td>Packaging supplies</td>
+                    <td>$20</td>
+                    <td>$30</td>
+                </tr>
+                <tr>
+                    <td>Shipping labels (thermal printer)</td>
+                    <td>$0 (print at home)</td>
+                    <td>$70 (thermal label printer)</td>
+                </tr>
+                <tr>
+                    <td><strong>TOTAL</strong></td>
+                    <td><strong>$284</strong></td>
+                    <td><strong>$489</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Monthly Income Projections</h3>
+        <ul>
+            <li><strong>Month 1-2:</strong> $100-300/mo — learning, building inventory, listing products</li>
+            <li><strong>Month 3-4:</strong> $500-1,500/mo — gaining traction, reviews coming in, TikTok content building</li>
+            <li><strong>Month 6+:</strong> $2,000-5,000/mo — established shop, repeat customers, multiple printers</li>
+            <li><strong>Year 2+ (scaled):</strong> $5,000-15,000/mo — print farm, brand established, wholesale orders</li>
+        </ul>
+        <p style="color: #8892b0; margin-top: 10px;">⚠️ These are realistic ranges based on active sellers — not guarantees. Consistency + content creation is key.</p>
+    </div>
+
+    <!-- SECTION 8: RESOURCES -->
+    <div class="section" id="resources">
+        <h2>🔗 Resources</h2>
+        
+        <h3>Free STL Files & Designs</h3>
+        <ul>
+            <li><a href="https://www.thingiverse.com" target="_blank">Thingiverse</a> — largest free STL library</li>
+            <li><a href="https://www.printables.com" target="_blank">Printables</a> — community designs, growing fast</li>
+            <li><a href="https://www.myminifactory.com" target="_blank">MyMiniFactory</a> — quality models, some paid</li>
+            <li><a href="https://thangs.com" target="_blank">Thangs</a> — AI-powered 3D model search</li>
+        </ul>
+
+        <h3>Design Software (Free)</h3>
+        <ul>
+            <li><a href="https://www.autodesk.com/products/fusion-360" target="_blank">Fusion 360</a> — professional CAD, free for personal use</li>
+            <li><a href="https://www.tinkercad.com" target="_blank">TinkerCAD</a> — beginner-friendly, browser-based</li>
+            <li><a href="https://www.blender.org" target="_blank">Blender</a> — organic/artistic modeling</li>
+        </ul>
+
+        <h3>Selling & Shipping</h3>
+        <ul>
+            <li><a href="https://www.etsy.com/sell" target="_blank">Etsy Seller</a> — start your shop</li>
+            <li><a href="https://seller.tiktokglobalshop.com" target="_blank">TikTok Shop Seller Center</a></li>
+            <li><a href="https://www.pirateship.com" target="_blank">Pirate Ship</a> — cheapest shipping labels</li>
+        </ul>
+
+        <h3>Learn More</h3>
+        <ul>
+            <li><a href="https://www.reddit.com/r/3Dprinting/" target="_blank">r/3Dprinting</a> — community help</li>
+            <li><a href="https://www.reddit.com/r/EtsySellers/" target="_blank">r/EtsySellers</a> — shop tips</li>
+            <li>YouTube: <strong>3D Printing Nerd</strong>, <strong>Makers Muse</strong>, <strong>Thomas Sanladerer</strong></li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="footer">
+    <p>Built with ⚡ by <span class="credit">Lane</span> for the PENEZUELA crew 🇻🇪🇦🇷</p>
+    <p style="margin-top: 8px;">Sam • Kevin • Andres • Lane</p>
+    <p style="margin-top: 15px; font-size: 0.8em;">February 2026 — Research compiled from 30+ sources</p>
+</div>
+
+</body>
+</html>
